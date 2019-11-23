@@ -9,6 +9,10 @@ using namespace std;
 class Sequence
 {
 public:
+    Sequence(string);                   // constructor
+    Sequence(const Sequence &otherSeq);  // copy constructor
+    // TODO: overloaded assignment operator
+    // TODO: destructor
 
 private:
     string word;
