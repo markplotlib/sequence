@@ -5,36 +5,36 @@
 #include <string>
 using namespace std;
 
+// function prototypes
+void populateArray(string [], int &, string);
+
 int main() {
-    string WORD_FILE = "words.dat";
-    ifstream infile;
-    int NUM_WORDS = 48;
-    string * wordArr = new string[NUM_WORDS];
+    const string WORD_FILE = "words.dat";
+    const int SIZE = 99;  // arbitrary upper limit of word count
+    int word_count = 0;
+    string wordArr[SIZE];
 
     cout << "\nWelcome to the Sequence tester!\n" << endl;
     cout << "--------------" << endl;
 
-    string testword = "FISH!";
-// Sequence seq;
-// seq.setWord(testword);
-// cout << "testing Sequence: " << seq.getWord() << endl;
+    // read words from file into working memory
+    populateArray(wordArr, word_count, WORD_FILE);
 
-    // read words from file, into string array
-    infile.open(WORD_FILE);
-    int i = 0;
-    for (string word; getline(infile, word); ) {
-        wordArr[i++] = word;
-    }
-    infile.close();
-
-    int j = 0;
-    cout << wordArr[j] << " " << rand() % 48 + 1 << " ";
-    // for (int j = 0; j < NUM_WORDS; j++) {
-    //     cout << wordArr[j] << " " << rand() % 48 + 1 << " ";
-    // }
+    // TODO: generate random seed for next line
+    int j = rand() % 48 + 1;
+    cout << wordArr[j];
 
     cout << "\n--------------" << endl;
     cout << "Thank you for using the Sequence tester!\n" << endl;
     return 0;
 }
 
+// read words from file, into string array
+void populateArray(string arr[], int &count, string filename) {
+	ifstream infile;
+    infile.open(filename);
+    for (string word; getline(infile, word); ) {
+        arr[count++] = word;
+    }
+    infile.close();
+}
