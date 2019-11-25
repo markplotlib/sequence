@@ -9,11 +9,12 @@ using namespace std;
 class Sequence
 {
 public:
-    Sequence(string);                   // constructor
-    Sequence(const Sequence &otherSeq);  // copy constructor
+    Sequence();                   // constructor
+    // Sequence(const Sequence &otherSeq);  // copy constructor
     // TODO: overloaded assignment operator
     // TODO: destructor
-
+    string getWord();
+    void setWord(string);
 private:
     string word;
     const int MIN_LENGTH = 3;

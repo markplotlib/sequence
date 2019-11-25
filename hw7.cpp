@@ -10,11 +10,16 @@ int main() {
     ifstream infile;
     int NUM_WORDS = 48;
     string * wordArr = new string[NUM_WORDS];
-        
+
     cout << "\nWelcome to the Sequence tester!\n" << endl;
     cout << "--------------" << endl;
 
-    // read in words file
+    string testword = "FISH!";
+// Sequence seq;
+// seq.setWord(testword);
+// cout << "testing Sequence: " << seq.getWord() << endl;
+
+    // read words from file, into string array
     infile.open(WORD_FILE);
     int i = 0;
     for (string word; getline(infile, word); ) {
@@ -22,9 +27,11 @@ int main() {
     }
     infile.close();
 
-    for (int j = 0; j < NUM_WORDS; j++) {
-        cout << wordArr[j] << " " << rand() % 48 + 1 << " ";
-    }
+    int j = 0;
+    cout << wordArr[j] << " " << rand() % 48 + 1 << " ";
+    // for (int j = 0; j < NUM_WORDS; j++) {
+    //     cout << wordArr[j] << " " << rand() % 48 + 1 << " ";
+    // }
 
     cout << "\n--------------" << endl;
     cout << "Thank you for using the Sequence tester!\n" << endl;

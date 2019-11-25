@@ -5,10 +5,18 @@
 using namespace std;
 
 // Constructor
-Sequence::Sequence(string text) {
-    string word = text;
+Sequence::Sequence() {
+    string word = "";
 }
 
 // Copy Constructor
 // Sequence::Sequence(const Sequence &otherSeq) {}
+
+string Sequence::getWord() {
+    return word;
+}
+
+void Sequence::getWord(string input) {
+    word = input;
+}
 
