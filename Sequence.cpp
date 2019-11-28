@@ -12,3 +12,5 @@ Sequence::Sequence() {
 string Sequence::getWord() {
     return word;
 }
+
+// bool Sequence::isActive() {}
