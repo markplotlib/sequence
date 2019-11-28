@@ -10,8 +10,10 @@ class Sequence
 {
 public:
     Sequence();  // constructor
-    string getWord();
     bool isActive();
+    bool guess(string);
+// string Sequence::emit() {}
+string TEMPgetWord();// this is a TEMP function that won't remain
 private:
     string word;
     const int MIN_LENGTH = 3;

@@ -6,13 +6,27 @@ using namespace std;
 
 // Constructor
 Sequence::Sequence() {
-    word = "AT";
-}
-
-string Sequence::getWord() {
-    return word;
+    word = "CAT";
+    // TODO: read from simple file, then full file
 }
 
 bool Sequence::isActive() {
     return ((int) word.length() >= MIN_LENGTH);
 }
+
+bool Sequence::guess(string guessWord) {
+    if (isActive()) {
+        cout << "I'm in the guess function. ";
+        return word == guessWord;
+    }
+    return false;
+}
+
+// string Sequence::emit() {}
+
+
+// this is a TEMP function that won't remain
+string Sequence::TEMPgetWord() {
+    return word;
+}
+
