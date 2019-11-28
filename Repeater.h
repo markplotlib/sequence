@@ -4,12 +4,13 @@
 #define Repeater_H
 
 #include <iostream>
+#include "Sequence.h"
 using namespace std;
 
-class Repeater
-{
+class Repeater: public Sequence {
 public:
-
+    Repeater();
+    // string emit();
 private:
 
 };

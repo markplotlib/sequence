@@ -22,3 +22,7 @@ bool Sequence::guess(string guessWord) {
     return false;
 }
 
+// make this virtual method, for dynamic binding
+string Sequence::emit() {
+    return "I am in Sequence.emit.\n";
+}

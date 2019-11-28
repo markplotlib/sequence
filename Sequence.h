@@ -6,12 +6,12 @@
 #include <iostream>
 using namespace std;
 
-class Sequence
-{
+class Sequence {
 public:
-    Sequence();  // constructor
+    Sequence();
     bool isActive();
     bool guess(string);
+    string emit();
 private:
     string word;
     const int MIN_LENGTH = 3;
