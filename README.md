@@ -1,3 +1,6 @@
+# Assumptions:
+- 
+
 # How much time did you spend on the assignment?
 
 Sat AM -- 3 hours - designing, making files

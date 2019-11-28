@@ -1,22 +1,14 @@
 // Implementation file for the Sequence class
 // Created by Mark Chesney on 11/23/2019.
 #include "Sequence.h"
-#include <string>
+#include <iostream>
 using namespace std;
 
 // Constructor
 Sequence::Sequence() {
-    string word = "";
+    word = "CAT";
 }
-
-// Copy Constructor
-// Sequence::Sequence(const Sequence &otherSeq) {}
 
 string Sequence::getWord() {
     return word;
 }
-
-void Sequence::getWord(string input) {
-    word = input;
-}
-
