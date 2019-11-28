@@ -6,9 +6,13 @@ using namespace std;
 
 // Constructor
 Sequence::Sequence() {
-    word = "CAT";
+    word = "AT";
 }
 
 string Sequence::getWord() {
     return word;
+}
+
+bool Sequence::isActive() {
+    return ((int) word.length() >= MIN_LENGTH);
 }
