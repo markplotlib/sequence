@@ -3,7 +3,7 @@
 #ifndef Repeater_H
 #define Repeater_H
 
-#include <string>
+#include <iostream>
 using namespace std;
 
 class Repeater
