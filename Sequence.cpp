@@ -7,10 +7,18 @@ using namespace std;
 // Constructor
 Sequence::Sequence() {
     word = "CAT";
+    // TODO: read from simple file, then full file
 }
 
-string Sequence::getWord() {
-    return word;
+bool Sequence::isActive() {
+    return ((int) word.length() >= MIN_LENGTH);
 }
 
-// bool Sequence::isActive() {}
+bool Sequence::guess(string guessWord) {
+    if (isActive()) {
+        cout << "I'm in the guess function. ";
+        return word == guessWord;
+    }
+    return false;
+}
+

@@ -10,10 +10,11 @@ class Sequence
 {
 public:
     Sequence();  // constructor
-    string getWord();
+    bool isActive();
+    bool guess(string);
 private:
     string word;
-// const int MIN_LENGTH = 3;
+    const int MIN_LENGTH = 3;
 };
 
 #endif
