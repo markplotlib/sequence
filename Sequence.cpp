@@ -22,3 +22,11 @@ bool Sequence::guess(string guessWord) {
     return false;
 }
 
+// string Sequence::emit() {}
+
+
+// this is a TEMP function that won't remain
+string Sequence::TEMPgetWord() {
+    return word;
+}
+

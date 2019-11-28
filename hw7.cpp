@@ -5,6 +5,7 @@ using namespace std;
 
 int main() {
     Sequence * seq = new Sequence();
+cout << "TEMP: THE WORD IS: " << seq->TEMPgetWord() << endl;
     cout << "Active State? " << boolalpha << seq->isActive() << endl;
 
     cout << "Making a guess, that word is FAT: " << boolalpha << seq->guess("FAT") << endl;
