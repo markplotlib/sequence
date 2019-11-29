@@ -9,6 +9,6 @@ Repeater::Repeater() {
     
 }
 
-// string Repeater::emit() {
-//     return "I am in Repeater.emit.\n";
-// }
+string Repeater::emit() {
+    return "I am in Repeater.emit.\n";
+}
