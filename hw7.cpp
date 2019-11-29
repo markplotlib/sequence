@@ -10,5 +10,8 @@ int main() {
     cout << "Making a guess, that word is FAT: " << boolalpha << rep->guess("FAT") << endl;
     cout << "Making a guess, that word is CAT: " << boolalpha << rep->guess("CAT") << endl;
     
+    string repEmission = rep->emit();
+    cout << repEmission;
+
     return 0;
 }

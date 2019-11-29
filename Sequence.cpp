@@ -6,7 +6,7 @@ using namespace std;
 
 // Constructor
 Sequence::Sequence() {
-    word = "CAT";
+    word = "AT";
     // TODO: read from simple file, then full file
 }
 

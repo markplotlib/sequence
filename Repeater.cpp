@@ -10,5 +10,9 @@ Repeater::Repeater() {
 }
 
 string Repeater::emit() {
-    return "I am in Repeater.emit.\n";
+    if (isActive()) {
+        return "I am in Repeater.emit.\n";
+    }
+    cout << "object state is INACTIVE." << endl;
+    return "emit the word itself\n";
 }
