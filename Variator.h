@@ -4,12 +4,13 @@
 #define Variator_H
 
 #include <iostream>
+#include "Sequence.h"
 using namespace std;
 
-class Variator
-{
+class Variator: public Sequence {
 public:
-
+    Variator();
+    string emit();
 private:
 
 };
