@@ -11,7 +11,7 @@ public:
     Sequence();
     bool isActive();
     bool guess(string);
-    string getWord();
+    string getWord(); // TODO: experiment with a protected getWord() method.
 private:
     string word;
     const int MIN_LENGTH = 3;

@@ -4,12 +4,13 @@
 #define Extractor_H
 
 #include <iostream>
+#include "Sequence.h"
 using namespace std;
 
-class Extractor
-{
+class Extractor: public Sequence {
 public:
-
+    Extractor();
+    string emit();
 private:
 
 };

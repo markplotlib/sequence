@@ -12,7 +12,7 @@ Repeater::Repeater() {
 string Repeater::emit() {
     cout << "<<<I am in Repeater::emit()>>>" << endl;
     if (isActive()) {
-        return getWord()[0] + getWord();
+        return getWord().substr(0,2) + getWord().substr(1,2);
     }
     cout << "<<<object state is INACTIVE. emit the word itself.>>>" << endl;
     return getWord();

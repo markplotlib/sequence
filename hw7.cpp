@@ -1,5 +1,6 @@
 // Driver file
 #include "Repeater.h"
+#include "Extractor.h"
 #include <iostream>
 using namespace std;
 
@@ -12,6 +13,17 @@ int main() {
     
     string repEmission = rep->emit();
     cout << repEmission << endl;
+
+
+    Extractor * extr = new Extractor();
+    cout << "Active State? " << boolalpha << extr->isActive() << endl;
+
+    cout << "Making a guess, that word is FAT: " << boolalpha << extr->guess("FAT") << endl;
+    cout << "Making a guess, that word is CAT: " << boolalpha << extr->guess("CAT") << endl;
+    
+    string extrEmission = extr->emit();
+    cout << extrEmission << endl;
+
 
     return 0;
 }
