@@ -6,7 +6,7 @@ using namespace std;
 
 // Constructor
 Sequence::Sequence() {
-    word = "CAT";
+    word = "AT";
     // TODO: read from simple file, then full file
 }
 
@@ -22,11 +22,8 @@ bool Sequence::guess(string guessWord) {
     return false;
 }
 
-// string Sequence::emit() {}
-
-
-// this is a TEMP function that won't remain
-string Sequence::TEMPgetWord() {
+string Sequence::getWord() {
+    cout << "I am in Sequence.emit." << endl;
     return word;
 }
 

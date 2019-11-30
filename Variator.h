@@ -3,7 +3,7 @@
 #ifndef Variator_H
 #define Variator_H
 
-#include <string>
+#include <iostream>
 using namespace std;
 
 class Variator

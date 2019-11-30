@@ -3,7 +3,7 @@
 #ifndef Inverter_H
 #define Inverter_H
 
-#include <string>
+#include <iostream>
 using namespace std;
 
 class Inverter

@@ -3,7 +3,7 @@
 #ifndef Extractor_H
 #define Extractor_H
 
-#include <string>
+#include <iostream>
 using namespace std;
 
 class Extractor

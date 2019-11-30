@@ -1,15 +1,17 @@
 // Driver file
-#include "Sequence.h"
+#include "Repeater.h"
 #include <iostream>
 using namespace std;
 
 int main() {
-    Sequence * seq = new Sequence();
-cout << "TEMP: THE WORD IS: " << seq->TEMPgetWord() << endl;
-    cout << "Active State? " << boolalpha << seq->isActive() << endl;
+    Repeater * rep = new Repeater();
+    cout << "Active State? " << boolalpha << rep->isActive() << endl;
 
-    cout << "Making a guess, that word is FAT: " << boolalpha << seq->guess("FAT") << endl;
-    cout << "Making a guess, that word is CAT: " << boolalpha << seq->guess("CAT") << endl;
+    cout << "Making a guess, that word is FAT: " << boolalpha << rep->guess("FAT") << endl;
+    cout << "Making a guess, that word is CAT: " << boolalpha << rep->guess("CAT") << endl;
     
+    string repEmission = rep->emit();
+    cout << repEmission;
+
     return 0;
 }
