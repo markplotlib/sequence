@@ -11,7 +11,7 @@ int main() {
     cout << "Making a guess, that word is CAT: " << boolalpha << rep->guess("CAT") << endl;
     
     string repEmission = rep->emit();
-    cout << repEmission;
+    cout << repEmission << endl;
 
     return 0;
 }

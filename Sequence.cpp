@@ -6,7 +6,7 @@ using namespace std;
 
 // Constructor
 Sequence::Sequence() {
-    word = "AT";
+    word = "CAT";
     // TODO: read from simple file, then full file
 }
 
@@ -16,14 +16,14 @@ bool Sequence::isActive() {
 
 bool Sequence::guess(string guessWord) {
     if (isActive()) {
-        cout << "I'm in the guess function. ";
+        cout << "<<<I'm in the Sequence::guess(..) function. >>>";
         return word == guessWord;
     }
     return false;
 }
 
 string Sequence::getWord() {
-    cout << "I am in Sequence.emit." << endl;
+    cout << "<<<I am in Sequence::getWord().>>>" << endl;
     return word;
 }
 
