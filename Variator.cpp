@@ -10,7 +10,6 @@ Variator::Variator() {
 }
 
 string Variator::emit() {
-    cout << "<<<I am in Variator::emit()>>>" << endl;
     if (isActive()) {
         return getWord() + getWord().substr(1,2);
     }

@@ -16,14 +16,12 @@ bool Sequence::isActive() {
 
 bool Sequence::guess(string guessWord) {
     if (isActive()) {
-        cout << "<<<I'm in the Sequence::guess(..) function. >>>";
         return word == guessWord;
     }
     return false;
 }
 
 string Sequence::getWord() {
-    cout << "<<<I am in Sequence::getWord().>>>" << endl;
     return word;
 }
 

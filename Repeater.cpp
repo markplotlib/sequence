@@ -10,7 +10,6 @@ Repeater::Repeater() {
 }
 
 string Repeater::emit() {
-    cout << "<<<I am in Repeater::emit()>>>" << endl;
     if (isActive()) {
         return getWord().substr(0,2) + getWord().substr(1,2);
     }
