@@ -13,7 +13,7 @@ public:
     bool isActive();
     bool guess(string);
     string getWord(); // TODO: experiment with a protected getWord() method.
-    void invert(int);
+    string invert(int);
 private:
     string word;
     const int MIN_LENGTH = 3;

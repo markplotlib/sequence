@@ -25,6 +25,7 @@ string Sequence::getWord() {
     return word;
 }
 
-void Sequence::invert(int i) {
-    cout << "invert: " << word << "\n" << endl;
+string Sequence::invert(int i) {
+    string inversion = word;
+    return inversion;
 }

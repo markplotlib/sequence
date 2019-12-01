@@ -10,7 +10,7 @@ using namespace std;
 class Extractor: public Sequence {
 public:
     Extractor();
-    void emit();
+    string emit();
 private:
 
 };

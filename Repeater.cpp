@@ -9,11 +9,10 @@ Repeater::Repeater() {
     
 }
 
-void Repeater::emit() {
+string Repeater::emit() {
     if (isActive()) {
-        cout << "emit: " << getWord().substr(0,2) + getWord().substr(1,2) << endl;
+        return getWord().substr(0,2) + getWord().substr(1,2);
     } else {
-        cout << "<<<object state is INACTIVE. emit the word itself.>>>" << endl;
-        cout << getWord() << endl;
+        return getWord();
     }
 }

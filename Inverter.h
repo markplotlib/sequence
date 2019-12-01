@@ -6,10 +6,9 @@
 #include <iostream>
 using namespace std;
 
-class Inverter
-{
+class Inverter {
 public:
-    void invert(int);  // TODO: experiment with a protected method.
+    string invert(int);  // TODO: experiment with a protected method.
 private:
     int i;
 };

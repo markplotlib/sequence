@@ -9,11 +9,10 @@ Extractor::Extractor() {
     
 }
 
-void Extractor::emit() {
+string Extractor::emit() {
     if (isActive()) {
-        cout << "emit: " << getWord().substr(1,2) << endl;
+        return getWord().substr(1,2);
     } else {
-        cout << "<<<object state is INACTIVE. emit the word itself.>>>" << endl;
-        cout << getWord() << endl;
+        return getWord();
     }
 }
