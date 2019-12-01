@@ -9,10 +9,11 @@ Variator::Variator() {
     
 }
 
-string Variator::emit() {
+void Variator::emit() {
     if (isActive()) {
-        return getWord() + getWord().substr(1,2);
+        cout << "emit: " << getWord() + getWord().substr(1,2) << endl;
+    } else {
+        cout << "<<<object state is INACTIVE. emit the word itself.>>>" << endl;
+        cout << getWord() << endl;
     }
-    cout << "<<<object state is INACTIVE. emit the word itself.>>>" << endl;
-    return getWord();
 }

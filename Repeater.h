@@ -10,7 +10,7 @@ using namespace std;
 class Repeater: public Sequence {
 public:
     Repeater();
-    string emit();
+    void emit();
 private:
 
 };

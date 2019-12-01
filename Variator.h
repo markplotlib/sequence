@@ -10,7 +10,7 @@ using namespace std;
 class Variator: public Sequence {
 public:
     Variator();
-    string emit();
+    void emit();
 private:
 
 };
