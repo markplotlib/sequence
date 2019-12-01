@@ -9,9 +9,9 @@ using namespace std;
 class Inverter
 {
 public:
-
+    void invert(int);  // TODO: experiment with a protected method.
 private:
-
+    int i;
 };
 
 #endif

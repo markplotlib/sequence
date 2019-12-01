@@ -8,17 +8,20 @@ using namespace std;
 int main() {
     Repeater * rep = new Repeater();
     rep->emit();
-    cout << "guess=FAT. outcome: " << boolalpha << rep->guess("FAT") << endl;
-    cout << "guess=CAT. outcome: " << boolalpha << rep->guess("CAT") << endl;    
+    rep->invert(1);
     
     Extractor * extr = new Extractor();
     extr->emit();
-    cout << "guess=FAT. outcome: " << boolalpha << extr->guess("FAT") << endl;
-    cout << "guess=CAT. outcome: " << boolalpha << extr->guess("CAT") << endl;
+    extr->invert(1);
     
     Variator * vrtr = new Variator();
     vrtr->emit();
-    cout << "guess=FAT. outcome: " << boolalpha << vrtr->guess("FAT") << endl;
+    vrtr->invert(1);
+
+    // TODO: make this (below) a SEQUENCE function, 
+    // not a method called on R nor E nor V!
+    cout << "guess=CAT. outcome: " << boolalpha << rep->guess("CAT") << endl;    
+    cout << "guess=CAT. outcome: " << boolalpha << extr->guess("CAT") << endl;
     cout << "guess=CAT. outcome: " << boolalpha << vrtr->guess("CAT") << endl;
     
     return 0;
