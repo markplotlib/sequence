@@ -27,5 +27,8 @@ string Sequence::getWord() {
 
 string Sequence::invert(int i) {
     string inversion = word;
+    char tmp = inversion[i]; // tmp = 'A'
+    inversion[i] = inversion[i + 1]; // inversion becomes "CTT"
+    inversion[i + 1] = tmp;
     return inversion;
 }

@@ -12,7 +12,8 @@ public:
     Sequence();  // no-args constructor
     bool isActive();
     bool guess(string);
-    string invert(int);
+    string invert(int) override;
+    // TODO: actually override this emit method below
     virtual string emit() = 0;  // abstract method, implemented by children classes.
 protected:
     string getWord();  // TODO: confirm (w/ Sheila?) that a protected getWord() method does NOT violate encapsulation!!
