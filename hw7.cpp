@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     string inversion, emission;
     
-    Repeater * rep = new Repeater();
+    Sequence * rep = new Repeater();
     emission = rep->emit();
     cout << "emit: " << emission << endl;
     
@@ -17,7 +17,7 @@ int main() {
     cout << "invert: " << inversion << "\n" << endl;
 
 
-    Extractor * extr = new Extractor();
+    Sequence * extr = new Extractor();
     extr->emit();
     emission = extr->emit();
     cout << "emit: " << emission << endl;
@@ -27,7 +27,7 @@ int main() {
     cout << "invert: " << inversion << "\n" << endl;
 
 
-    Variator * vrtr = new Variator();
+    Sequence * vrtr = new Variator();
     vrtr->emit();
     emission = vrtr->emit();
     cout << "emit: " << emission << endl;

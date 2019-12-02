@@ -8,7 +8,7 @@ using namespace std;
 
 class Inverter {
 public:
-    string invert(int);  // TODO: experiment with a protected method.
+    virtual string invert(int) = 0;  // TODO: experiment with a protected method.
 private:
     int i;
 };
