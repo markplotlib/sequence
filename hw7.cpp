@@ -13,7 +13,8 @@ int main() {
     cout << "emit: " << emission << endl;
     
     rep->invert(1);
-    inversion = rep->emit();
+// needs changing
+inversion = rep->emit();
     cout << "invert: " << inversion << "\n" << endl;
 
 
@@ -23,7 +24,8 @@ int main() {
     cout << "emit: " << emission << endl;
 
     extr->invert(1);
-    inversion = extr->emit();
+// needs changing
+inversion = extr->emit();
     cout << "invert: " << inversion << "\n" << endl;
 
 
@@ -33,7 +35,8 @@ int main() {
     cout << "emit: " << emission << endl;
 
     vrtr->invert(1);
-    inversion = vrtr->emit();
+// needs changing
+inversion = vrtr->emit();
     cout << "invert: " << inversion << "\n" << endl;
 
     // TODO: make this (below) a SEQUENCE function, 

@@ -12,9 +12,10 @@ public:
     Sequence();  // no-args constructor
     bool isActive();
     bool guess(string);
-    string getWord(); // TODO: experiment with a protected getWord() method.
     string invert(int);
     virtual string emit() = 0;  // abstract method, implemented by children classes.
+protected:
+    string getWord();  // TODO: confirm (w/ Sheila?) that a protected getWord() method does NOT violate encapsulation!!
 private:
     string word;
     const int MIN_LENGTH = 3;
