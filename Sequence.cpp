@@ -28,9 +28,9 @@ bool Sequence::guess(string guessWord) {
 string Sequence::invert() {
     int i = index;
     string inversion = word;
-    char tmp = inversion[i]; // tmp = 'A'
-    inversion[i] = inversion[i + 1]; // inversion becomes "CTT"
-    inversion[i + 1] = tmp;  // inversion SHOULD become "CTA"
+    char tmp = inversion[i];
+    inversion[i] = inversion[i + 1];
+    inversion[i + 1] = tmp;
     return inversion;
 }
 
@@ -43,10 +43,7 @@ int Sequence::getIndex() {
         srand((unsigned int)time(NULL));
         isSeeded = true;
     }
-    // int low = 0;
-    // int high = word.length() - 1;
     int i = rand() % (word.length() - 1);
-    // int i = rand() % (high - low + 1) + low;
     cout << "i = " << i << endl;
     return i;
 }
