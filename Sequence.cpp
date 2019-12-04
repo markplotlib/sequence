@@ -13,7 +13,7 @@ int Sequence::countOfGuessedWords = 0;
 Sequence::Sequence() {
     // TODO: SWITCH THIS OUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     // TODO: read from simple file, then full file
-    word = "BOAT";
+    word = "JAMESTOWN";
     index = getRandomIndex(0, word.length() - 1);
 }
 
