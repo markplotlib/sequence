@@ -28,7 +28,7 @@ int main() {
     cout << "\nWelcome to the Sequence tester!\n" << endl;
     cout << "--------------" << endl;
 
-    cout << "Testing word " << Sequence::incrementGuessingRound() << endl;
+    cout << "Testing word " << Sequence::incrementGuessingRound() << "\n" << endl;
 
     // output strings
     string inversion, emission;
@@ -37,16 +37,13 @@ int main() {
     int seqItem = 0;
     while (seqItem < SEQ_COLLECTION_SIZE) {
         seqArr[seqItem++] = new Repeater();
-        cout << seqItem << endl;
         seqArr[seqItem++] = new Extractor();
-        cout << seqItem << endl;
         seqArr[seqItem++] = new Variator();
-        cout << seqItem << endl;
     }
 
     for (int i = 0; i < SEQ_COLLECTION_SIZE; i++) {
-        cout << "emit: " << (*seqArr)->emit() << endl;
-        cout << "invert: " << (*seqArr)->invert() << "\n" << endl;
+        cout << "emit: " << seqArr[i]->emit() << endl;
+        cout << "invert: " << seqArr[i]->invert() << "\n" << endl;
     }
 
     // TODO: make this (below) a SEQUENCE function, 

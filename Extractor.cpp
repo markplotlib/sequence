@@ -12,7 +12,10 @@ Extractor::Extractor() {
 string Extractor::emit() {
                                                                 cout << "Extractor::emit" << endl;
     if (isActive()) {
-        return getWord().substr(1,2);
+        string word = getWord();
+        int index = getRandomIndex(1, word.length() - 1);
+
+        return getWord().substr(1, index);
     } else {
         return getWord();
     }
