@@ -11,8 +11,8 @@ bool Sequence::isSeeded = false;
 Sequence::Sequence() {
     // TODO: SWITCH THIS OUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     // TODO: read from simple file, then full file
-    word = "CAT";
-    index = getIndex();
+    word = "BOAT";
+    index = getRandomIndex(0, word.length() - 1);
 }
 
 bool Sequence::isActive() {
@@ -39,12 +39,12 @@ string Sequence::getWord() {
     return word;
 }
 
-int Sequence::getIndex() {
+int Sequence::getRandomIndex(int low, int high) {
     if(!isSeeded) {
         srand((unsigned int)time(NULL));
         isSeeded = true;
     }
-    int i = rand() % (word.length() - 1);
-    cout << "i = " << i << endl;
+    int i = rand() % (high - low) + low;
+    cout << "[in Seq::getIndex()] i = " << i << endl;
     return i;
 }

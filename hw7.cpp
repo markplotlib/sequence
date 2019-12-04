@@ -11,22 +11,19 @@ int main() {
     Sequence * rep = new Repeater();
     emission = rep->emit();
     cout << "emit: " << emission << endl;
-// needs changing
-inversion = rep->invert();  // TODO: decide where to make index encapsulated 
+    inversion = rep->invert();
     cout << "invert: " << inversion << "\n" << endl;
 
     Sequence * extr = new Extractor();
     emission = extr->emit();
     cout << "emit: " << emission << endl;
-// needs changing
-inversion = extr->invert();  // TODO: decide where to make index encapsulated
+    inversion = extr->invert();
     cout << "invert: " << inversion << "\n" << endl;
 
     Sequence * vrtr = new Variator();
     emission = vrtr->emit();
     cout << "emit: " << emission << endl;
-// needs changing
-inversion = vrtr->invert();  // TODO: decide where to make index encapsulated 
+    inversion = vrtr->invert();
     cout << "invert: " << inversion << "\n" << endl;
 
     // TODO: make this (below) a SEQUENCE function, 

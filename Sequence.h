@@ -49,7 +49,7 @@ public:
 
 protected:
     string getWord();
-    int getIndex();
+    int getRandomIndex(int, int);
 
 private:
     static bool isSeeded;       // whether to generate new seed for random int
