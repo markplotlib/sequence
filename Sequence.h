@@ -3,10 +3,8 @@
  * File name: Sequence.h
  * Version: 1.0
  * References: none
- * Description: this class includes the following functionality:
- *      encapsulates a word, 
- *      encapsulates an index when executing the invert() function, 
- *      and responds to inquiries.
+ * Description: encapsulates a word, encapsulates an index when executing 
+ *      the invert() function, and responds to inquiries.
  * Dependencies: A Sequence is-an Inverter.
  * - Sequence inherits all methods from Inverter.
  * - Sequence implements Inverter's abstract method invert()
