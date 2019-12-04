@@ -10,6 +10,7 @@ Repeater::Repeater() {
 }
 
 string Repeater::emit() {
+                                                                cout << "Repeater::emit" << endl;
     if (isActive()) {
         string word = getWord();
         int index = getRandomIndex(0, word.length() - 1);

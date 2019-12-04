@@ -10,6 +10,7 @@ Extractor::Extractor() {
 }
 
 string Extractor::emit() {
+                                                                cout << "Extractor::emit" << endl;
     if (isActive()) {
         return getWord().substr(1,2);
     } else {

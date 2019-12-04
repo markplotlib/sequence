@@ -37,8 +37,11 @@ int main() {
     int seqItem = 0;
     while (seqItem < SEQ_COLLECTION_SIZE) {
         seqArr[seqItem++] = new Repeater();
+        cout << seqItem << endl;
         seqArr[seqItem++] = new Extractor();
+        cout << seqItem << endl;
         seqArr[seqItem++] = new Variator();
+        cout << seqItem << endl;
     }
 
     for (int i = 0; i < SEQ_COLLECTION_SIZE; i++) {
