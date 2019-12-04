@@ -9,8 +9,8 @@
  * Assumptions:
  * - indices for inversion are contained in child class
  */
-#ifndef Inverter_H
-#define Inverter_H
+#ifndef INVERTER_H
+#define INVERTER_H
 
 #include <iostream>
 using namespace std;

@@ -42,7 +42,7 @@ public:
     // Postcondition: returns sequence with indices i and i+1 swapped.
     string invert() override;
 
-    // Emit a string.
+    // Emit a string variant of encapsulated word.
     // Precondition: child class inherits Sequence and implements emit()
     // Postcondition: determined within child class.
     virtual string emit() = 0;  // abstract method, implemented by child class.
