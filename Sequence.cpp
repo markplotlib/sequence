@@ -9,9 +9,10 @@ bool Sequence::isSeeded = false;
 
 // Constructor
 Sequence::Sequence() {
+    // TODO: SWITCH THIS OUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // TODO: read from simple file, then full file
     word = "CAT";
     index = getIndex();
-    // TODO: read from simple file, then full file
 }
 
 bool Sequence::isActive() {
