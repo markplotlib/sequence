@@ -47,6 +47,11 @@ public:
     // Postcondition: determined within child class.
     virtual string emit() = 0;  // abstract method, implemented by child class.
 
+    // DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_
+    // Precondition: _______TODO_______TODO_______TODO_______TODO_______TODO
+    // Postcondition: _______TODO_______TODO_______TODO_______TODO_______TODO
+    static int incrementGuessingRound();
+
 protected:
     string getWord();
     int getRandomIndex(int, int);
@@ -56,6 +61,7 @@ private:
     string word;                // encapsulated word
     int index;                  // index of character to be inverted
     const int MIN_LENGTH = 3;   // minimum length of word for active sequence
+    static int countOfGuessedWords;  // keeps track of guess-word rounds
 };
 
 #endif

@@ -22,10 +22,11 @@ int main() {
     }
     infile.close();
 
-    for (int j = 0; j < numWords; j++) {
-        cout << wordArray[j] << " ";
-    }
-    cout << endl;
+
+    cout << "\nWelcome to the Sequence tester!\n" << endl;
+    cout << "--------------" << endl;
+
+    cout << "Testing word " << Sequence::incrementGuessingRound() << endl;
 
     // output strings
     string inversion, emission;

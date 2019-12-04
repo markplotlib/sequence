@@ -7,6 +7,8 @@ using namespace std;
 
 bool Sequence::isSeeded = false;
 
+int Sequence::countOfGuessedWords = 0;
+
 // Constructor
 Sequence::Sequence() {
     // TODO: SWITCH THIS OUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -45,6 +47,9 @@ int Sequence::getRandomIndex(int low, int high) {
         isSeeded = true;
     }
     int i = rand() % (high - low) + low;
-    cout << "[in Seq::getIndex()] i = " << i << endl;
     return i;
+}
+
+int Sequence::incrementGuessingRound() {
+    return ++countOfGuessedWords;
 }
