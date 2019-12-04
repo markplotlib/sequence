@@ -33,6 +33,7 @@ int main() {
     // output strings
     string inversion, emission;
 
+    // generate heterogenous collection of Sequence objects -- contain at least two instances of each object.     
     int seqItem = 0;
     while (seqItem < SEQ_COLLECTION_SIZE) {
         seqArr[seqItem++] = new Repeater();
@@ -40,29 +41,14 @@ int main() {
         seqArr[seqItem++] = new Variator();
     }
 
-    cout << "Hi: " << seqArr[0]->emit() << endl;;
-
-    Sequence * rep = new Repeater();
-    emission = rep->emit();
-    cout << "emit: " << emission << endl;
-    inversion = rep->invert();
-    cout << "invert: " << inversion << "\n" << endl;
-
-    Sequence * extr = new Extractor();
-    emission = extr->emit();
-    cout << "emit: " << emission << endl;
-    inversion = extr->invert();
-    cout << "invert: " << inversion << "\n" << endl;
-
-    Sequence * vrtr = new Variator();
-    emission = vrtr->emit();
-    cout << "emit: " << emission << endl;
-    inversion = vrtr->invert();
-    cout << "invert: " << inversion << "\n" << endl;
+    for (int i = 0; i < SEQ_COLLECTION_SIZE; i++) {
+        cout << "emit: " << (*seqArr)->emit() << endl;
+        cout << "invert: " << (*seqArr)->invert() << "\n" << endl;
+    }
 
     // TODO: make this (below) a SEQUENCE function, 
     // not a method called on R nor E nor V!
-    cout << "guess=CAT. outcome: " << boolalpha << rep->guess("CAT") << endl;    
+// cout << "guess=CAT. outcome: " << boolalpha << rep->guess("CAT") << endl;
     // cout << "guess=CAT. outcome: " << boolalpha << extr->guess("CAT") << endl;
     // cout << "guess=CAT. outcome: " << boolalpha << vrtr->guess("CAT") << endl;
     
