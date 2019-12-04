@@ -9,10 +9,12 @@ using namespace std;
 int main() {
     // sample word bank is stored in a file
     const string WORD_FILE = "words.dat";
-    const int SIZE = 99;  // arbitrary upper limit of word 
+    const int WORD_BANK_SIZE = 99;  // arbitrary upper limit of word 
+    const int SEQ_COLLECTION_SIZE = 6;  // length of a collection of Sequence objects
 
     ifstream infile;
-    string wordArray[SIZE];
+    Sequence * seqArr[SEQ_COLLECTION_SIZE];
+    string wordArray[WORD_BANK_SIZE];
     int numWords = 0;  // total count of word bank
 
     // read words from file into working memory
@@ -30,7 +32,16 @@ int main() {
 
     // output strings
     string inversion, emission;
-    
+
+    int seqItem = 0;
+    while (seqItem < SEQ_COLLECTION_SIZE) {
+        seqArr[seqItem++] = new Repeater();
+        seqArr[seqItem++] = new Extractor();
+        seqArr[seqItem++] = new Variator();
+    }
+
+    cout << "Hi: " << seqArr[0]->emit() << endl;;
+
     Sequence * rep = new Repeater();
     emission = rep->emit();
     cout << "emit: " << emission << endl;
