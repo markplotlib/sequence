@@ -3,9 +3,31 @@
 #include "Extractor.h"
 #include "Variator.h"
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int main() {
+    // sample word bank is stored in a file
+    const string WORD_FILE = "words.dat";
+    const int SIZE = 99;  // arbitrary upper limit of word 
+
+    ifstream infile;
+    string wordArray[SIZE];
+    int numWords = 0;  // total count of word bank
+
+    // read words from file into working memory
+    infile.open(WORD_FILE);
+    for (string word; getline(infile, word); ) {
+        wordArray[numWords++] = word;
+    }
+    infile.close();
+
+    for (int j = 0; j < numWords; j++) {
+        cout << wordArray[j] << " ";
+    }
+    cout << endl;
+
+    // output strings
     string inversion, emission;
     
     Sequence * rep = new Repeater();
