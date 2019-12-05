@@ -9,7 +9,6 @@ using namespace std;
 // function prototypes
 void helloGoodbye(bool);
 void guessLoop();
-void populateArray(string[], int&, string);
 
 // global constants
 const char REPEAT = 'y';        // key to repeat loop
@@ -23,25 +22,21 @@ int main() {
     const int RUN_MIN = 4;          // minimal loop repetitions
 
     // declare variables
+    ifstream infile;            // file reader
     Sequence * seqArr[SEQ_COLLECTION_SIZE];    // Sequence object collection
     string wordArray[WORD_BANK_SIZE];          // word bank
+    string inversion, emission;    // output strings
 
     // initialize variables
     int roundCount = 0;         // keeps track of round number
-    // int wordCount = 0;              // total count of word bank
-    int numWords = 0;             // running count of word bank
+    int numWords = 0;           // running count of word bank
     
     // read words from file into working memory
-// populateArray(wordArray, wordCount, WORD_FILE);
-
-    ifstream infile;    
-    // int numWords = 0;
     infile.open(WORD_FILE);
     for (string word; getline(infile, word); ) {
         wordArray[numWords++] = word;
     }
     infile.close();
-
 
     helloGoodbye(true);    // greeting
 
@@ -49,9 +44,6 @@ int main() {
         cout << "Testing word " << roundCount << " out of " << RUN_MIN << "\n" << endl;
     } 
 
-
-    // output strings
-    string inversion, emission;
     
     // set the sequence word
     Sequence::setWord(wordArray, numWords);
@@ -80,7 +72,7 @@ int main() {
 
 void guessLoop() {
     string guess;
-    char runAgain = 'y';        // user input value
+    char runAgain = 'y';
     while (runAgain == REPEAT) {
 		cout << "Please make a guess, ENTIRELY IN CAPS: ";
         cin >> guess;
@@ -104,14 +96,3 @@ void helloGoodbye(bool hello) {
 		cout << "Thank you for using the Sequence tester!\n" << endl;
 	}
 }
-
-
-// void populateArray(string wordArray, int &wordCount, string WORD_FILE) {
-//     ifstream infile;    
-//     int numWords = 0;
-//     infile.open(WORD_FILE);
-//     for (string word; getline(infile, word); ) {
-//         wordArray[numWords++] = word;
-//     }
-//     infile.close();
-// }
