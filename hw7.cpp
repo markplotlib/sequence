@@ -35,6 +35,9 @@ int main() {
     // output strings
     string inversion, emission;
     
+    // set the sequence word
+    Sequence::setWord(wordArray, numWords);
+
     // generate heterogenous collection of Sequence objects -- contain at least two instances of each object.     
     int seqItem = 0;
     while (seqItem < SEQ_COLLECTION_SIZE) {
@@ -42,9 +45,6 @@ int main() {
         seqArr[seqItem++] = new Extractor();
         seqArr[seqItem++] = new Variator();
     }
-
-    // set the word
-    Sequence::setWord(wordArray, numWords);
 
     for (int i = 0; i < SEQ_COLLECTION_SIZE; i++) {
         cout << "emit: " << seqArr[i]->emit() << endl;

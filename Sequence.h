@@ -57,18 +57,15 @@ public:
     // Postcondition: _______TODO_______TODO_______TODO_______TODO_______TODO
     static int incrementGuessingRound();
 
-    // returns random int within range
+    // sets encapsulated sequence word, shared commonly among sequences
+    //      receives array of words and array length 
     // Precondition: none
-    // Postcondition: random int returned
-    static int getRandomIndex(int, int);
-
-    // sets encapsulated sequence word
-    // Precondition: sequence object initialized
     // Postcondition: sequence word is set
     static void setWord(string[], int);
 
 protected:
-    string getWord();
+    static int getRandomIndex(int, int);  // helper function
+    string getWord();   // returns word
 
 private:
     const int MIN_LENGTH = 3;   // minimum length of word for active sequence

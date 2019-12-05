@@ -11,8 +11,13 @@ string Sequence::word = "";
 
 // No-args Constructor
 Sequence::Sequence() {
-    word = "";    
-    index = 0;
+    if (isActive()) {
+        cout << "ACTIVE ";
+        index = getRandomIndex(0, word.length() - 1);
+    } else {
+        cout << "INACTIVE ";
+        index = 0;
+    }
 }
 
 // Constructor
@@ -33,12 +38,16 @@ bool Sequence::guess(string guessWord) {
 }
 
 string Sequence::invert() {
-    int i = index;
-    string inversion = word;
-    char tmp = inversion[i];
-    inversion[i] = inversion[i + 1];
-    inversion[i + 1] = tmp;
-    return inversion;
+    if (isActive()) {
+        int i = index;
+        string inversion = word;
+        char tmp = inversion[i];
+        inversion[i] = inversion[i + 1];
+        inversion[i + 1] = tmp;
+        return inversion;
+    } else {
+        return word;
+    }
 }
 
 int Sequence::getRandomIndex(int low, int high) {
