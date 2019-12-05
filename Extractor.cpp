@@ -27,13 +27,12 @@ string Extractor::emit(string subseq) {
 
         } else if (getWord().find(subseq) != string::npos) {
             // substring is contained in word
-cout << "I DON'T KNOW" << endl; 
+            int start = getWord().find(subseq);
+            return getWord().erase(start, subseq.length());
         } else {
+            // substring NOT contained -> emission treated as no-param emit
             return emit();
         }
-
-        
-        return "";
     } else {
         // inactive state
         return getWord();

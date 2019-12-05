@@ -64,6 +64,11 @@ public:
     // Postcondition: sequence word is set
     static void setWord(string[], int);
 
+    // Destructor
+    // Precondition: sequence object on heap (dynamic memory allocated)
+    // Postcondition: memory unallocated
+    ~Sequence();
+
 protected:
     static int getRandomIndex(int, int);  // helper function
     string getWord();   // returns word

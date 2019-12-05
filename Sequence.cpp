@@ -8,7 +8,6 @@ using namespace std;
 bool Sequence::isSeeded = false;
 string Sequence::word = "";
 
-// No-args Constructor
 Sequence::Sequence() {
     if (isActive()) {
         index = getRandomIndex(0, word.length() - 1);
@@ -17,11 +16,12 @@ Sequence::Sequence() {
     }
 }
 
-// Constructor
 Sequence::Sequence(string thatWord) {
     word = thatWord;
     index = getRandomIndex(0, word.length() - 1);
 }
+
+Sequence::~Sequence() { }
 
 bool Sequence::isActive() {
     return ((int) word.length() >= MIN_LENGTH);
