@@ -58,7 +58,22 @@ while (++roundCount <= 0) {
         guessLoop();
     }
 
+    // additional polymorphic functionality
+    string subseq;
+    Extractor * newSeq = new Extractor();
+    Sequence::setWord(wordArray, 1);
+    cout << "invert: " << newSeq->invert() << endl;
 
+    char runAgain = 'y';
+    while (runAgain == 'y' || runAgain == 'Y') {
+        cout << "Please provide a subsequence, ENTIRELY IN CAPS: ";
+        cin >> subseq;
+        cout << "emit: " << newSeq->emit(subseq) << endl;
+        cout << "\nProvide a subsequence again (y/n)? ";
+        cin >> runAgain;
+    }
+    string guess;
+    guessLoop();
 
     helloGoodbye(false);  // salutation
 
