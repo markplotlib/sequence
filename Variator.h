@@ -27,7 +27,10 @@ public:
     // Postcondition: variator object initialized with word and index.
     Variator();
 
-
+    // Emit a string variant of encapsulated word.
+    // Precondition: Sequence class implements getRandomIndex() and getWord(),
+    //               variator object is active
+    // Postcondition: string returned, as concatenation or truncation of word.
     string emit();
 private:
 
