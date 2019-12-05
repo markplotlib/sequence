@@ -2,7 +2,7 @@
  * Author: Mark Chesney
  * File name: Repeater.h
  * Version: 1.0
- * References: Sequence
+ * References: none
  * Description: emits a variant of an encapsulated word, repeating one randomly
  *       selected character, when active.
  * Dependencies: A Repeater is-a Sequence.
@@ -28,7 +28,8 @@ public:
     Repeater();
 
     // Emit a string variant of encapsulated word.
-    // Precondition: Sequence class implements getRandomIndex() and getWord()
+    // Precondition: Sequence class implements getRandomIndex() and getWord(),
+    //               repeater object is active
     // Postcondition: string returned, with one repeating character.
     string emit();
 
