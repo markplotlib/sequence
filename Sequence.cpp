@@ -54,8 +54,8 @@ int Sequence::incrementGuessingRound() {
     return ++countOfGuessedWords;
 }
 
-void Sequence::setWord(string that_word) {
-    word = that_word;
+void Sequence::setWord(string arr[], int num) {
+    word = arr[getRandomIndex(0, num)];
 }
 
 string Sequence::getWord() {

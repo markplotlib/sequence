@@ -65,7 +65,7 @@ public:
     // sets encapsulated sequence word
     // Precondition: sequence object initialized
     // Postcondition: sequence word is set
-    static void setWord(string);
+    static void setWord(string[], int);
 
 protected:
     string getWord();
@@ -73,7 +73,7 @@ protected:
 private:
     const int MIN_LENGTH = 3;   // minimum length of word for active sequence
     static bool isSeeded;       // whether to generate new seed for random int
-    static string word;                // encapsulated word
+    static string word;  // encapsulated word, shared commonly among sequences
     static int countOfGuessedWords;  // keeps track of guess-word rounds
     int index;                  // index of character to be inverted
 };

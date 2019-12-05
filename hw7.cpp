@@ -44,7 +44,7 @@ int main() {
     }
 
     // set the word
-    Sequence::setWord(wordArray[Sequence::getRandomIndex(0, numWords)]);
+    Sequence::setWord(wordArray, numWords);
 
     for (int i = 0; i < SEQ_COLLECTION_SIZE; i++) {
         cout << "emit: " << seqArr[i]->emit() << endl;
