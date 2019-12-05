@@ -20,6 +20,19 @@ string Extractor::emit() {
 
 string Extractor::emit(string subseq) {
     if (isActive()) {
+
+        if (getWord() == subseq) {
+            // substring equals word
+            return SUBSEQUENCE_MATCH;
+
+        } else if (getWord().find(subseq) != string::npos) {
+            // substring is contained in word
+cout << "I DON'T KNOW" << endl; 
+        } else {
+            return emit();
+        }
+
+        
         return "";
     } else {
         // inactive state
