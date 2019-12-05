@@ -9,7 +9,7 @@ using namespace std;
 // function prototypes
 void helloGoodbye(bool);
 void guessLoop();
-void populateArray(string[], &int, string);
+void populateArray(string[], int&, string);
 
 // global constants
 const char REPEAT = 'y';        // key to repeat loop
@@ -28,11 +28,20 @@ int main() {
 
     // initialize variables
     int roundCount = 0;         // keeps track of round number
-    int wordCount = 0;              // total count of word bank
+    // int wordCount = 0;              // total count of word bank
     int numWords = 0;             // running count of word bank
     
     // read words from file into working memory
-    populateArray(wordArray, wordCount, WORD_FILE);
+// populateArray(wordArray, wordCount, WORD_FILE);
+
+    ifstream infile;    
+    // int numWords = 0;
+    infile.open(WORD_FILE);
+    for (string word; getline(infile, word); ) {
+        wordArray[numWords++] = word;
+    }
+    infile.close();
+
 
     helloGoodbye(true);    // greeting
 
@@ -68,16 +77,6 @@ int main() {
     return 0;
 }
 
-void populateArray(string wordArray, int &wordCount, string WORD_FILE) {
-    ifstream infile;    // reader object
-    int numWords = 0;
-    infile.open(WORD_FILE);
-    for (string word; getline(infile, word); ) {
-        wordArray[numWords++] = word;
-    }
-    infile.close();
-}
-
 
 void guessLoop() {
     string guess;
@@ -105,3 +104,14 @@ void helloGoodbye(bool hello) {
 		cout << "Thank you for using the Sequence tester!\n" << endl;
 	}
 }
+
+
+// void populateArray(string wordArray, int &wordCount, string WORD_FILE) {
+//     ifstream infile;    
+//     int numWords = 0;
+//     infile.open(WORD_FILE);
+//     for (string word; getline(infile, word); ) {
+//         wordArray[numWords++] = word;
+//     }
+//     infile.close();
+// }
