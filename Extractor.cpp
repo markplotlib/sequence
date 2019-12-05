@@ -19,3 +19,12 @@ string Extractor::emit() {
         return getWord();
     }
 }
+
+string Extractor::emit(string subseq) {
+    if (isActive()) {
+        return "";
+    } else {
+        // inactive state
+        return getWord();
+    }
+}

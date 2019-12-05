@@ -53,14 +53,9 @@ public:
     // Postcondition: determined within child class.
     virtual string emit() = 0;  // abstract method, implemented by child class.
 
-    // DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_
-    // Precondition: _______TODO_______TODO_______TODO_______TODO_______TODO
-    // Postcondition: _______TODO_______TODO_______TODO_______TODO_______TODO
-    static int incrementGuessingRound();
-
-    // DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_
-    // Precondition: _______TODO_______TODO_______TODO_______TODO_______TODO
-    // Postcondition: _______TODO_______TODO_______TODO_______TODO_______TODO
+    // validates correctness of a guessed word
+    // Precondition: sequence is active
+    // Postcondition: boolean returned if guess is correct
     static bool correctGuess(string);
 
     // sets encapsulated sequence word, shared commonly among sequences

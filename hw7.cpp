@@ -11,9 +11,6 @@ void helloGoodbye(bool);
 void guessLoop();
 void populateWordArray(string[], int&, string);
 
-// global constants
-const char REPEAT = 'y';        // key to repeat loop
-
 
 int main() {
     // initialize constants
@@ -69,7 +66,7 @@ int main() {
 void guessLoop() {
     string guess;
     char runAgain = 'y';
-    while (runAgain == REPEAT) {
+    while (runAgain == 'y' || runAgain == 'Y') {
 		cout << "Please make a guess, ENTIRELY IN CAPS: ";
         cin >> guess;
         if (!(Sequence::correctGuess(guess))) {

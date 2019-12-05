@@ -30,9 +30,15 @@ public:
     // Emit a string variant of encapsulated word.
     // Precondition: Sequence class implements getRandomIndex() and getWord(),
     //               extractor object is active
-    // Postcondition: string returned, under following conditions:
-    //               - if no subsequence provided, return substring of word
+    // Postcondition: substring returned
     string emit();
+
+    // Emit a string variant of encapsulated word.
+    // Precondition: Sequence class implements getRandomIndex() and getWord(),
+    //               subsequence provided, and extractor object is active
+    // Postcondition: substring returned
+    string emit(string);
+
 private:
     const int START_OFFSET = 1;  // left-most index of string variant
     const int STOP_OFFSET = 1;  // right-most index of string variant
