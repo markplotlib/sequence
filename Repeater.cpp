@@ -5,9 +5,7 @@
 using namespace std;
 
 // Constructor
-Repeater::Repeater() {
-    
-}
+Repeater::Repeater() { }
 
 string Repeater::emit() {
     if (isActive()) {

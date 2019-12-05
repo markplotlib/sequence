@@ -5,9 +5,7 @@
 using namespace std;
 
 // Constructor
-Variator::Variator() {
-    
-}
+Variator::Variator() { }
 
 string Variator::emit() {
     if (isActive()) {

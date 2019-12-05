@@ -22,7 +22,12 @@ using namespace std;
 
 class Variator: public Sequence {
 public:
+    // No-args constructor
+    // Precondition: Sequence class defined.
+    // Postcondition: variator object initialized with word and index.
     Variator();
+
+
     string emit();
 private:
 

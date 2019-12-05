@@ -17,9 +17,9 @@ using namespace std;
 
 class Inverter {
 public:
-    // Swaps two characters of word of a given sequence at indices i and i+1.
-    // Precondition: child class inherits Inverter and implements invert()
-    // Postcondition: returns string with indices i and i+1 swapped.
+    // virtual abstract method
+    // Precondition: none
+    // Postcondition: none
     virtual string invert() = 0;
 };
 

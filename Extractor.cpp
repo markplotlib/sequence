@@ -5,9 +5,7 @@
 using namespace std;
 
 // Constructor
-Extractor::Extractor() {
-    
-}
+Extractor::Extractor() { }
 
 string Extractor::emit() {
     if (isActive()) {
