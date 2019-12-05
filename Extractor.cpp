@@ -13,8 +13,7 @@ string Extractor::emit() {
                                                                 cout << "Extractor::emit" << endl;
     if (isActive()) {
         string word = getWord();
-        int index = getRandomIndex(1, word.length() - 1);
-
+        int index = getRandomIndex(START_OFFSET, word.length() - STOP_OFFSET);
         return getWord().substr(index, word.length() - 1);
     } else {
         return getWord();

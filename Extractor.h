@@ -34,7 +34,8 @@ public:
     //               - if no subsequence provided, return substring of word
     string emit();
 private:
-
+    const int START_OFFSET = 1;  // left-most index of string variant
+    const int STOP_OFFSET = 2;  // right-most index of string variant
 };
 
 #endif
