@@ -11,6 +11,7 @@
  * State: sequence enters active state when word is of proper length
  * Assumptions:
  * - A sequence is active when its word is at least 3 characters long
+ * - valid guesses will only be entered in ALL CAPS
  */
 #ifndef SEQUENCE_H
 #define SEQUENCE_H
@@ -56,6 +57,11 @@ public:
     // Precondition: _______TODO_______TODO_______TODO_______TODO_______TODO
     // Postcondition: _______TODO_______TODO_______TODO_______TODO_______TODO
     static int incrementGuessingRound();
+
+    // DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_DESCRIPTION_
+    // Precondition: _______TODO_______TODO_______TODO_______TODO_______TODO
+    // Postcondition: _______TODO_______TODO_______TODO_______TODO_______TODO
+    static bool correctGuess(string);
 
     // sets encapsulated sequence word, shared commonly among sequences
     //      receives array of words and array length 

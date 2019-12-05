@@ -48,6 +48,10 @@ string Sequence::invert() {
     }
 }
 
+bool Sequence::correctGuess(string guess) {
+    return guess == word;
+}
+
 int Sequence::getRandomIndex(int low, int high) {
     if(!isSeeded) {
         srand((unsigned int)time(NULL));
