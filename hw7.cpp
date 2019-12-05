@@ -25,6 +25,7 @@ int main() {
     // declare variables
     Sequence * seqArr[SEQ_COLLECTION_SIZE];    // Sequence object collection
     string inversion, emission;    // output strings
+    int seqItem;                    // counter in Sequence object collection
 
     // initialize variables
     int roundCount = 0;         // keeps track of round number
@@ -36,27 +37,28 @@ int main() {
 
     while (++roundCount <= RUN_MIN) {
         cout << "Testing word " << roundCount << " out of " << RUN_MIN << "\n" << endl;
-    } 
+        
+        // set the sequence word
+        Sequence::setWord(wordArray, numWords);
 
-    
-    // set the sequence word
-    Sequence::setWord(wordArray, numWords);
+        // generate heterogenous collection of Sequence objects 
+        // containing at least two instances of each object.
+        seqItem = 0;
+        while (seqItem < SEQ_COLLECTION_SIZE) {
+            seqArr[seqItem++] = new Repeater();
+            seqArr[seqItem++] = new Extractor();
+            seqArr[seqItem++] = new Variator();
+        }
 
-    // generate heterogenous collection of Sequence objects 
-    // containing at least two instances of each object.
-    int seqItem = 0;
-    while (seqItem < SEQ_COLLECTION_SIZE) {
-        seqArr[seqItem++] = new Repeater();
-        seqArr[seqItem++] = new Extractor();
-        seqArr[seqItem++] = new Variator();
+        // call emit and invert on heterogenous collection
+        for (int i = 0; i < SEQ_COLLECTION_SIZE; i++) {
+            cout << "emit: " << seqArr[i]->emit() << endl;
+            cout << "invert: " << seqArr[i]->invert() << "\n" << endl;
+        }
+
+        // prompt for guesses until user exits or guesses correctly
+        guessLoop();
     }
-
-    for (int i = 0; i < SEQ_COLLECTION_SIZE; i++) {
-        cout << "emit: " << seqArr[i]->emit() << endl;
-        cout << "invert: " << seqArr[i]->invert() << "\n" << endl;
-    }
-
-    guessLoop();
 
     helloGoodbye(false);  // salutation
 
