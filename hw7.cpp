@@ -9,6 +9,7 @@ using namespace std;
 // function prototypes
 void helloGoodbye(bool);
 void guessLoop();
+void populateWordArray(string[], int&, string);
 
 // global constants
 const char REPEAT = 'y';        // key to repeat loop
@@ -22,22 +23,15 @@ int main() {
     const int RUN_MIN = 4;          // minimal loop repetitions
 
     // declare variables
-    ifstream infile;            // file reader
     Sequence * seqArr[SEQ_COLLECTION_SIZE];    // Sequence object collection
-    string wordArray[WORD_BANK_SIZE];          // word bank
     string inversion, emission;    // output strings
 
     // initialize variables
     int roundCount = 0;         // keeps track of round number
     int numWords = 0;           // running count of word bank
+    string wordArray[WORD_BANK_SIZE]; 
+    populateWordArray(wordArray, numWords, WORD_FILE);
     
-    // read words from file into working memory
-    infile.open(WORD_FILE);
-    for (string word; getline(infile, word); ) {
-        wordArray[numWords++] = word;
-    }
-    infile.close();
-
     helloGoodbye(true);    // greeting
 
     while (++roundCount <= RUN_MIN) {
@@ -95,4 +89,13 @@ void helloGoodbye(bool hello) {
 	} else {
 		cout << "Thank you for using the Sequence tester!\n" << endl;
 	}
+}
+
+void populateWordArray(string arr[], int& n, string fname) {
+    ifstream infile;            // file reader
+    infile.open(fname);
+    for (string word; getline(infile, word); ) {
+        arr[n++] = word;
+    }
+    infile.close();
 }
