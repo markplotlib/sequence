@@ -18,6 +18,10 @@
 
 - Because Sequence implements invert(), it's the proper class to encapsulate int i for abstract Inverter class.
 
+- The sequence object must be active in order to invert.
+
+- Sequence allows guessing on inactive sequences.
+
 ## class structure:
 
 * Sequence is-an Inverter (extends Inverter),

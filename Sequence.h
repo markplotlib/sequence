@@ -54,7 +54,7 @@ public:
     virtual string emit() = 0;  // abstract method, implemented by child class.
 
     // validates correctness of a guessed word
-    // Precondition: sequence is active
+    // Precondition: none (guessing is allowed on inactive sequences)
     // Postcondition: boolean returned if guess is correct
     static bool correctGuess(string);
 
