@@ -32,7 +32,8 @@ int main() {
     
     helloGoodbye(true);    // greeting
 
-    while (++roundCount <= RUN_MIN) {
+    // while (++roundCount <= RUN_MIN) {
+while (++roundCount <= 0) {
         cout << "Testing word " << roundCount << " out of " << RUN_MIN << "\n" << endl;
         
         // set the sequence word
@@ -56,6 +57,8 @@ int main() {
         // prompt for guesses until user exits or guesses correctly
         guessLoop();
     }
+
+
 
     helloGoodbye(false);  // salutation
 
@@ -91,7 +94,7 @@ void helloGoodbye(bool hello) {
 }
 
 void populateWordArray(string arr[], int& n, string fname) {
-    ifstream infile;            // file reader
+    ifstream infile;
     infile.open(fname);
     for (string word; getline(infile, word); ) {
         arr[n++] = word;

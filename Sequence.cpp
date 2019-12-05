@@ -18,8 +18,8 @@ Sequence::Sequence() {
 }
 
 // Constructor
-Sequence::Sequence(string that_word) {
-    word = that_word;
+Sequence::Sequence(string thatWord) {
+    word = thatWord;
     index = getRandomIndex(0, word.length() - 1);
 }
 

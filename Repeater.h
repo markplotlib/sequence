@@ -31,7 +31,7 @@ public:
     // Precondition: Sequence class implements getRandomIndex() and getWord(),
     //               repeater object is active
     // Postcondition: string returned, with one repeating character.
-    string emit();
+    string emit() override;
 
 private:
 

@@ -35,7 +35,7 @@ public:
     // Precondition: Sequence class implements getRandomIndex() and getWord(),
     //               extractor object is active
     // Postcondition: substring returned
-    string emit();
+    string emit() override;
 
     // Emit a string variant of encapsulated word.
     // Precondition: Sequence class implements getRandomIndex() and getWord(),

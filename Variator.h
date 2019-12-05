@@ -31,7 +31,7 @@ public:
     // Precondition: Sequence class implements getRandomIndex() and getWord(),
     //               variator object is active
     // Postcondition: string returned, as concatenation or truncation of word.
-    string emit();
+    string emit() override;
 private:
 
 };
