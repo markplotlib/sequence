@@ -74,6 +74,12 @@ int main() {
     string guess;
     guessLoop();
 
+    // cout << "calling destructor..." << endl;
+    // seqItem = 0;
+    // while (seqItem < SEQ_COLLECTION_SIZE) {
+    //     delete seqArr[seqItem];
+    // }
+    // delete newExtractor;
 
     helloGoodbye(false);  // salutation
 
