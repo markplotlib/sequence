@@ -26,6 +26,11 @@ public:
     // Postcondition: sequence object initialized with word and index.
     Sequence();
 
+    // Constructor
+    // Precondition: one word (without blank spaces / punctuation) is passed in
+    // Postcondition: sequence object initialized with word and index.
+    Sequence(string);
+
     // Returns whether state is active or not.
     // Precondition: none
     // Postcondition: returns boolean -- true if sequence is active,
@@ -52,16 +57,25 @@ public:
     // Postcondition: _______TODO_______TODO_______TODO_______TODO_______TODO
     static int incrementGuessingRound();
 
+    // returns random int within range
+    // Precondition: none
+    // Postcondition: random int returned
+    static int getRandomIndex(int, int);
+
+    // sets encapsulated sequence word
+    // Precondition: sequence object initialized
+    // Postcondition: sequence word is set
+    static void setWord(string);
+
 protected:
     string getWord();
-    int getRandomIndex(int, int);
 
 private:
-    static bool isSeeded;       // whether to generate new seed for random int
-    string word;                // encapsulated word
-    int index;                  // index of character to be inverted
     const int MIN_LENGTH = 3;   // minimum length of word for active sequence
+    static bool isSeeded;       // whether to generate new seed for random int
+    static string word;                // encapsulated word
     static int countOfGuessedWords;  // keeps track of guess-word rounds
+    int index;                  // index of character to be inverted
 };
 
 #endif

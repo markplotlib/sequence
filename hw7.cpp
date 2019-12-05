@@ -6,12 +6,14 @@
 #include <fstream>
 using namespace std;
 
+
 int main() {
-    // sample word bank is stored in a file
-    const string WORD_FILE = "words.dat";
+    // initialize constants
+    const string WORD_FILE = "words.dat";    // sample word bank is stored in a file
     const int WORD_BANK_SIZE = 99;  // arbitrary upper limit of word 
     const int SEQ_COLLECTION_SIZE = 6;  // length of a collection of Sequence objects
 
+    // initialize variables
     ifstream infile;
     Sequence * seqArr[SEQ_COLLECTION_SIZE];
     string wordArray[WORD_BANK_SIZE];
@@ -32,7 +34,7 @@ int main() {
 
     // output strings
     string inversion, emission;
-
+    
     // generate heterogenous collection of Sequence objects -- contain at least two instances of each object.     
     int seqItem = 0;
     while (seqItem < SEQ_COLLECTION_SIZE) {
@@ -40,6 +42,9 @@ int main() {
         seqArr[seqItem++] = new Extractor();
         seqArr[seqItem++] = new Variator();
     }
+
+    // set the word
+    Sequence::setWord(wordArray[Sequence::getRandomIndex(0, numWords)]);
 
     for (int i = 0; i < SEQ_COLLECTION_SIZE; i++) {
         cout << "emit: " << seqArr[i]->emit() << endl;

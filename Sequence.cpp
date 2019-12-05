@@ -6,14 +6,18 @@
 using namespace std;
 
 bool Sequence::isSeeded = false;
-
 int Sequence::countOfGuessedWords = 0;
+string Sequence::word = "";
+
+// No-args Constructor
+Sequence::Sequence() {
+    word = "";    
+    index = 0;
+}
 
 // Constructor
-Sequence::Sequence() {
-    // TODO: SWITCH THIS OUT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // TODO: read from simple file, then full file
-    word = "JAMESTOWN";
+Sequence::Sequence(string that_word) {
+    word = that_word;
     index = getRandomIndex(0, word.length() - 1);
 }
 
@@ -37,10 +41,6 @@ string Sequence::invert() {
     return inversion;
 }
 
-string Sequence::getWord() {
-    return word;
-}
-
 int Sequence::getRandomIndex(int low, int high) {
     if(!isSeeded) {
         srand((unsigned int)time(NULL));
@@ -52,4 +52,12 @@ int Sequence::getRandomIndex(int low, int high) {
 
 int Sequence::incrementGuessingRound() {
     return ++countOfGuessedWords;
+}
+
+void Sequence::setWord(string that_word) {
+    word = that_word;
+}
+
+string Sequence::getWord() {
+    return word;
 }
