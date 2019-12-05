@@ -10,7 +10,6 @@ Variator::Variator() {
 }
 
 string Variator::emit() {
-                                                                cout << "Variator::emit" << endl;
     if (isActive()) {
         string word = getWord();
         int index1 = getRandomIndex(0, word.length() - 1);
@@ -25,6 +24,7 @@ string Variator::emit() {
         }
         return getWord() + getWord().substr(index1, index2);
     } else {
+        // inactive state
         return getWord();
     }
 }

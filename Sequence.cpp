@@ -12,10 +12,8 @@ string Sequence::word = "";
 // No-args Constructor
 Sequence::Sequence() {
     if (isActive()) {
-        cout << "ACTIVE ";
         index = getRandomIndex(0, word.length() - 1);
     } else {
-        cout << "INACTIVE ";
         index = 0;
     }
 }
