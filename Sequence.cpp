@@ -6,7 +6,6 @@
 using namespace std;
 
 bool Sequence::isSeeded = false;
-int Sequence::countOfGuessedWords = 0;
 string Sequence::word = "";
 
 // No-args Constructor
@@ -59,10 +58,6 @@ int Sequence::getRandomIndex(int low, int high) {
     }
     int i = rand() % (high - low) + low;
     return i;
-}
-
-int Sequence::incrementGuessingRound() {
-    return ++countOfGuessedWords;
 }
 
 void Sequence::setWord(string arr[], int num) {

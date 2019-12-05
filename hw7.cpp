@@ -6,6 +6,14 @@
 #include <fstream>
 using namespace std;
 
+// function prototypes
+void helloGoodbye(bool);
+void guessLoop();
+void populateArray(string[], &int, string);
+
+// global constants
+const char REPEAT = 'y';        // key to repeat loop
+
 
 int main() {
     // initialize constants
@@ -13,35 +21,25 @@ int main() {
     const int WORD_BANK_SIZE = 99;  // arbitrary upper limit of word 
     const int SEQ_COLLECTION_SIZE = 6;  // length of Sequence object collection
     const int RUN_MIN = 4;          // minimal loop repetitions
-    const char REPEAT = 'y';        // key to repeat loop
 
     // declare variables
-    string guess;                   // user input guess
-    ifstream infile;                // object for reading in
     Sequence * seqArr[SEQ_COLLECTION_SIZE];    // Sequence object collection
     string wordArray[WORD_BANK_SIZE];          // word bank
 
     // initialize variables
-    int numWords = 0;               // total count of word bank
-    char runAgain = 'y';            // user input value
-
+    int roundCount = 0;         // keeps track of round number
+    int wordCount = 0;              // total count of word bank
+    int numWords = 0;             // running count of word bank
+    
     // read words from file into working memory
-    infile.open(WORD_FILE);
-    for (string word; getline(infile, word); ) {
-        wordArray[numWords++] = word;
-    }
-    infile.close();
+    populateArray(wordArray, wordCount, WORD_FILE);
 
+    helloGoodbye(true);    // greeting
 
-    cout << "\nWelcome to the Sequence tester!\n" << endl;
-    cout << "--------------" << endl;
+    while (++roundCount <= RUN_MIN) {
+        cout << "Testing word " << roundCount << " out of " << RUN_MIN << "\n" << endl;
+    } 
 
-
-cout << "HEY MARK! LOOP BEGINS HERE" << endl;
-
-
-    cout << "Testing word " << Sequence::incrementGuessingRound()
-         << " out of " << RUN_MIN << "\n" << endl;
 
     // output strings
     string inversion, emission;
@@ -63,6 +61,27 @@ cout << "HEY MARK! LOOP BEGINS HERE" << endl;
         cout << "invert: " << seqArr[i]->invert() << "\n" << endl;
     }
 
+    guessLoop();
+
+    helloGoodbye(false);  // salutation
+
+    return 0;
+}
+
+void populateArray(string wordArray, int &wordCount, string WORD_FILE) {
+    ifstream infile;    // reader object
+    int numWords = 0;
+    infile.open(WORD_FILE);
+    for (string word; getline(infile, word); ) {
+        wordArray[numWords++] = word;
+    }
+    infile.close();
+}
+
+
+void guessLoop() {
+    string guess;
+    char runAgain = 'y';        // user input value
     while (runAgain == REPEAT) {
 		cout << "Please make a guess, ENTIRELY IN CAPS: ";
         cin >> guess;
@@ -76,13 +95,13 @@ cout << "HEY MARK! LOOP BEGINS HERE" << endl;
             runAgain = 'n';
         }
     }
+}
 
-
-    // TODO: make this (below) a SEQUENCE function, 
-    // not a method called on R nor E nor V!
-// cout << "guess=CAT. outcome: " << boolalpha << rep->guess("CAT") << endl;
-    // cout << "guess=CAT. outcome: " << boolalpha << extr->guess("CAT") << endl;
-    // cout << "guess=CAT. outcome: " << boolalpha << vrtr->guess("CAT") << endl;
-    
-    return 0;
+void helloGoodbye(bool hello) {
+    if (hello) {
+        cout << "\nWelcome to the Sequence tester!\n" << endl;
+        cout << "--------------" << endl;
+	} else {
+		cout << "Thank you for using the Sequence tester!\n" << endl;
+	}
 }
