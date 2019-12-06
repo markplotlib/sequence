@@ -67,7 +67,7 @@ public:
     // Destructor
     // Precondition: sequence object on heap (dynamic memory allocated)
     // Postcondition: memory unallocated
-    ~Sequence();
+    virtual ~Sequence();
 
 protected:
     static int getRandomIndex(int, int);  // helper function

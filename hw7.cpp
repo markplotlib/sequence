@@ -79,7 +79,7 @@ int main() {
     // while (seqItem < SEQ_COLLECTION_SIZE) {
     //     delete seqArr[seqItem];
     // }
-    // delete newExtractor;
+    delete newExtractor;
 
     helloGoodbye(false);  // salutation
 
