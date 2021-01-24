@@ -33,25 +33,7 @@ a class that emits a variant (or subsequence) of the encapsulated word, if the p
 a class that emits a variant of the encapsulated word, either concatenating or truncating an internal subsequence. If active, the object will arbitrarily concatenate or truncate an internal subsequence; otherwise, it will emit the word itself.
 * For example, if the word ‘seesaw’ is encapsulated, ‘seesawse’, ‘saseesaw’, ‘seesaws’, etc., could be returned. Alternatively, ‘see’, ‘sees’, 'eesa', etc. could be returned.
 
-# Feedback Questions
-
-The following questions were created by the instructor, Sheila Oh, Seattle Univ
-
-Computer Science Fundamentals Graduate Certificate Program
-
-### How much time did you spend on the assignment?
-
-#### about 21 hours:
-
-* Sat -- 3 hours
-
-* Sun -- 5 hours
-
-* Mon -- 5 hours
-
-* Wed -- 2 + 6 hours
-
-### Is your solution fully working or not? Briefly describe design decisions and class structure.
+### Design decisions and class structure
 
 #### design decisions: 
 
@@ -68,7 +50,3 @@ Computer Science Fundamentals Graduate Certificate Program
 * Sequence is-an Inverter (extends Inverter),
 
 * Repeater, Extractor, and Variator each is-a Sequence (extends Sequence)
-
-### Did you work on the extra credit problem? Briefly describe any issues or explain any assumptions made.
-
-### Any feedback on the assignment?
